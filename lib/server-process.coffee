@@ -14,7 +14,7 @@ class ServerProcess
   constructor: (projectPath) ->
     @projectPath = projectPath
     @command     = "elixir"
-    @args        = [path.join(__dirname, "alchemist-server/run.exs")]
+    @args        = "\"" + [path.join(__dirname, "alchemist-server/run.exs")] + "\""
     @proc        = null
     @busy        = false
     @lastRequestType = null
